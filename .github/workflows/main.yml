@@ -31,5 +31,11 @@ jobs:
       - name: Terraform companya Plan 
         run: cd enviroments/companya/ ; terraform plan 
 
+      - name: Terraform companya Apply  
+        run: cd enviroments/companya/ ; terraform apply -auto-approve 
+  
+      - name: Terraform companya Destory  
+        run: cd enviroments/companya/ ; terraform destroy -auto-approve
+  
     #   - name: Terraform Apply
     #     run: terraform apply -auto-approve
