@@ -16,7 +16,6 @@ jobs:
       - name: Set up Terraform
         uses: hashicorp/setup-terraform@v1
         with:
-          #terraform_version: 0.15.0
           terraform_version: 1.4.0
           
       - name: Configure AWS credentials
@@ -26,8 +25,11 @@ jobs:
           aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           aws-region: us-east-1  # Set your AWS region
 
-      - name: Terraform Init
+      - name: Terraform companya Init
         run: cd enviroments/companya/ ; terraform init
 
-      - name: Terraform Apply
-        run: terraform apply -auto-approve
+      - name: Terraform companya Plan 
+        run: cd enviroments/companya/ ; terraform plan 
+
+    #   - name: Terraform Apply
+    #     run: terraform apply -auto-approve
