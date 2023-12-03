@@ -63,8 +63,8 @@ Instructions for setting up the project locally.
 
 Step-by-step instructions to install and configure the project.
 
-1. Clone the repository: `[repository https://github.com/orenevan/]`
-2. Navigate to the project directory: `cd `
+1. Clone the repository: `[repository https://github.com/orenevan/lytext_assigmnet]`
+2. Navigate to the project directory: `cd lytext_assigmnet`
    
 
 Environment lifecycle
