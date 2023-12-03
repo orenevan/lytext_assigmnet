@@ -28,14 +28,24 @@ jobs:
       - name: Terraform companya Init
         run: cd enviroments/companya/ ; terraform init
 
-      - name: Terraform companya Plan 
-        run: cd enviroments/companya/ ; terraform plan 
-
       - name: Terraform companya Apply  
-        run: cd enviroments/companya/ ; terraform apply -auto-approve 
+        run: cd enviroments/companya/ ; echo terraform apply -auto-approve 
   
+      - name: Terraform companyb Init
+        run: cd enviroments/companyb/ ; terraform init
+
+      - name: Terraform companya Plan  
+        run: cd enviroments/companya/ ; terraform plan  
+ 
+      - name: Terraform vpc_peering Init
+        run: cd enviroments/vpc_peering  ; terraform init
+
+      - name: Terraform vpc_peering  Plan  
+        run: cd enviroments/vpc_peering / ; terraform plan  
+ 
+
       - name: Terraform companya Destory  
-        run: cd enviroments/companya/ ; terraform destroy -auto-approve
+        run: cd enviroments/companya/ ; echo terraform destroy -auto-approve
   
     #   - name: Terraform Apply
     #     run: terraform apply -auto-approve
