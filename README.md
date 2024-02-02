@@ -15,12 +15,11 @@
 [link example](https://github.com/gruntwork-io/terragrunt-infrastructure-modules-example)
 `bold`
 
-See code block 
-```
-curl http://webserver-example-prod-1234567890.us-east-1.elb.amazonaws.com:80
+Terraform and AWS cloud EC2 instances 
+This repo is responsible for deploying companies 
+in 2 different regions of the globe (in AWS).
+Using Terraform and AWS cloud EC2 instances . 
 
-Hello, World
-```
 
 The code in this repo uses the following folder hierarchy:
 
@@ -33,10 +32,30 @@ account
        └ resource
 ```
 
- Terraform and AWS cloud EC2 instances 
-This repo is responsible for deploying companies 
-in 2 different regions of the globe (in AWS).
-Using Terraform and AWS cloud EC2 instances . 
+
+```hcl
+# referenc modules like this 
+module "company" {
+  source = "../../modules/company"
+  region = "us-east-1"
+  company_name = "companya"
+  company_vpc_cidr = var.company_vpc_cidr
+  instance_name = var.instance_name
+}
+
+terraform {
+  source = "git::git@github.com:gruntwork-io/terragrunt-infrastructure-modules-example.git//path/to/module?ref=v0.0.1"
+}
+
+# Fill in the variables for that module
+inputs = {
+  foo = "bar"
+  baz = 3
+}
+
+
+```
+
 
 
 
