@@ -11,13 +11,35 @@
 - [Contributing](#contributing)
 
 ## Introduction
+``Prepared by Oren Evan``
+[link example](https://github.com/gruntwork-io/terragrunt-infrastructure-modules-example)
+`bold`
+
+See code block 
+```
+curl http://webserver-example-prod-1234567890.us-east-1.elb.amazonaws.com:80
+
+Hello, World
+```
+
+The code in this repo uses the following folder hierarchy:
+
+```
+account
+ └ _global
+ └ region
+    └ _global
+    └ environment
+       └ resource
+```
+
  Terraform and AWS cloud EC2 instances 
 This repo is responsible for deploying companies 
 in 2 different regions of the globe (in AWS).
 Using Terraform and AWS cloud EC2 instances . 
 
 
-``Prepared by Oren Evan``
+
 
 Main Objective:
 * there are companies in 2 different regions of the globe (in AWS).
