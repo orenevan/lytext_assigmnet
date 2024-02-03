@@ -2,7 +2,6 @@
 
 
 ## Table of Contents
-'test'
 - [Introduction](#introduction)
 - [Getting Started](#getting-started)
   - [Prerequisites](#prerequisites)
